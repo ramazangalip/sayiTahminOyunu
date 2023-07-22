@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Sayı Tahmin Etme Oyunu</h1>
+    <p>1000-9999 arasında bir sayı tahmin edin</p>
+    <input type="text" id="guessInput" >
+    <button type="button" onclick="checkGuess()">Tahmin ET!</button>
+
+    <p id="result"></p>
+    <audio src="dogru-ses-efekti.mp3" id="correctSound"></audio>
+    <audio src="yanlis-ses-efekti.mp3" id="incorrectSound"></audio>
+    
+</body>
+</html>
