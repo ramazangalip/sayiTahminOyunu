@@ -1,6 +1,6 @@
 var randomMumber = Math.floor(Math.random()* 9999) + 1000;
 var guessCount = 0;
-var guessLimit = 3;// Sahip Olunan Hak
+var guessLimit = 5; // Sahip Olunan Hak
 
 function checkGuess(){
     var guess = parseInt(document.getElementById("guessInput").value);
@@ -12,7 +12,7 @@ function checkGuess(){
         guessCount++;
         if(guess == randomMumber){
             result.innerHTML = "Tebrikler! Bildiniz"
-            document.getElementById("correctSound").onplay();
+            document.getElementById("correctSound").play();
             guessCount = guessLimit;
         }else if(guess < randomMumber){
             result.innerHTML = "Çok Düşük"
@@ -24,7 +24,7 @@ function checkGuess(){
 
         }else{
             result.innerHTML += " " + (guessLimit - guessCount) + "Tahmin Hakkın Kaldı";
-            document.getElementById("incorrectSound").onplay();
+            document.getElementById("wrongSound").play();
         }
 
     }
